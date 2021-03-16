@@ -9,11 +9,10 @@ import StartScreen from './start';
 import React ,{ useState, useEffect, useRef,useCallback, } from "react";
 import {Provider} from 'react-redux';
 import ApiKeys from './constants';
+import smtk from './src/Screens/stack';
 import { View, Image, Alert, Button, StyleSheet, Text ,ImageBackground,TouchableHighlight} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
-
-import HomeScreen from "./src/Screens/home";
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -46,20 +45,6 @@ import AuthScreen from './auth';
 function RootNavigator(props,{navigation})
 
 {
-  
-      
-      
-
-
-      
-
-  
-  
-  
-  
-  
-  
-
 
 
   const Drawers = createDrawerNavigator();
@@ -140,11 +125,6 @@ function RootNavigator(props,{navigation})
     
   }
 
-  
-  
-  
-
-  
 
 
   return (
@@ -154,12 +134,7 @@ function RootNavigator(props,{navigation})
       <Drawers.Navigator drawerContent={props => <DrawerContent {...props} />} backBehavior={false}   >
         <Drawers.Screen name="Start" component={StartScreen} />
         <Drawers.Screen name="Auth" component={AuthScreen} />
-        <Drawers.Screen name="Home" component={HomeScreen} />
-
-        
-        
-        
-        
+        <Drawers.Screen name="Home" component={smtk} />
         
         
       </Drawers.Navigator>
