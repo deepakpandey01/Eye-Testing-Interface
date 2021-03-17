@@ -6,6 +6,7 @@ import Modal1 from '../Dashboard/initial';
 import Check from '../Dashboard/checks';
 import Mcq from '../Dashboard/mcq';
 import ShowNumber from '../Dashboard/eye';
+import SearchScreen from './search'
 const Stack = createStackNavigator();
 
 function MyStack() {
@@ -16,6 +17,7 @@ function MyStack() {
       <Stack.Screen name="check" component={Check} options={{headerShown: false}} />
       <Stack.Screen name="Mcq" component={Mcq} options={{headerShown: false}} />
       <Stack.Screen name="Show Number" component={ShowNumber} options={{headerShown: false}} />
+      <Stack.Screen name="Search" component={SearchScreen} options={{headerShown: false}} />
     </Stack.Navigator>
     // </NavigationContainer>
   );
